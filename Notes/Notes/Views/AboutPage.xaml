@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BirdApp.Views.AboutPage"
+             Title="About">
+    <!-- Layout children in two rows -->
+    <Grid RowDefinitions="Auto,*">
+        <!-- Layout children vertically -->
+        <StackLayout Grid.Row="1"
+                     Margin="5">
+            <Label FontSize="14">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Subjects"
+                                  FontAttributes="Bold"
+                                  FontSize="14" />
+                            <Span Text=" v1.0" />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <!--Creating Labels with buttons linked to the aboutpage cs for users to click on and be sent to the browser page -->
+            <Label Text="About using the Bird app page how it was created" />
+            <Button Text="Learn more"
+                    Clicked="OnButtonClicked" />
+        </StackLayout>
+        <StackLayout Grid.Row="2"
+                             Margin="5"><!--Layout design for how each item in the screen to be displayed margin being the borders-->
+            <Label FontSize="14">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="How to!"
+                                  FontAttributes="Bold"
+                                  FontSize="14" /><!--Fontsize set for displaying certain text-->
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Text="Tutorial on spotting" />
+            <Button Text="Learn more"
+                    Clicked="OnTutorialButtonClicked"/>
+        </StackLayout>
+        <StackLayout Grid.Row="3"
+                     Margin="5">
+            <Label FontSize="14">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Locations"
+                                  FontAttributes="Bold"
+                                  FontSize="14" />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Text="Find out about the best spots!." />
+            <Button Text="Learn more"
+                    Clicked="OnLocationButtonClicked"/>
+
+        </StackLayout>
+
+    </Grid>
+</ContentPage>
